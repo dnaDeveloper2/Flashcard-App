@@ -1,0 +1,16 @@
+.btn.btn-danger {
+float:right;
+  }
+
+.btn.btn-primary,
+.btn.btn-secondary {
+margin: 5px;
+}
+
+
+.container-card,
+.container-deck {
+    border: 1px solid #8c8a8a; /* Adjust the border color and thickness as needed */
+    padding: 10px; /* Add padding to create space between the content and the border */
+    margin-bottom: 20px; /* Add margin at the bottom for additional spacing */
+  }
