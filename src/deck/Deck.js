@@ -99,7 +99,7 @@ const Deck = () => {
               Edit Card
             </Link>
             <button
-              onClick={() => handleDeleteCard(card.id)}
+              onClick={() => handleDelete(card.id)}
               className="btn btn-danger"
             >
               <span
