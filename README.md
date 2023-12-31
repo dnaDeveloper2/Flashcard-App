@@ -1,5 +1,5 @@
 # Flashcard-o-matic App
-***Project description: ***
+## Project description:
 A local school has decided to put together a flash card application, Flashcard-o-matic, to help their students study online. Teachers will use this application to create decks of flash cards for the subjects that they teach, and students will study the decks. The school needs you to build the application that the students and teachers will use.
 
 A flashcard application for helping students study online.
@@ -7,7 +7,7 @@ Bootstrap 4 is included with the starter HTML. You're welcome to use vanilla CSS
 
 For detailed instructions on how to complete this project, consult the Instructions document in the Qualified assessment interface.
 
-***Learning objectives***
+## Learning objectives
 This project was designed to test my ability to work with rendering and state management using React. I had to use the following concepts:
 Installing packages via NPM
 
