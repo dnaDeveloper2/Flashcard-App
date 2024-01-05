@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createDeck } from "../utils/api";
+import NavBar from "../Layout/NavBar";
 
 const CreateDeck = () => {
   const history = useHistory();
@@ -33,21 +34,7 @@ const CreateDeck = () => {
 
   return (
     <div>
-      <nav>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <Link to="/">
-              <span
-                className="oi oi-home"
-                title="home"
-                aria-hidden="true"
-              ></span>
-              Home
-            </Link>
-          </li>
-          <li className="breadcrumb-item active">Create Deck</li>
-        </ol>
-      </nav>
+      <NavBar deck={CreateDeck} />
 
       <h2>Create Deck</h2>
 

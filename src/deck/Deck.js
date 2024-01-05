@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { readDeck } from "../utils/api/index";
+import NavBar from "../Layout/NavBar";
 
 const Deck = () => {
   const { deckId } = useParams();
@@ -36,22 +37,7 @@ const Deck = () => {
 
   return (
     <div>
-      <nav>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <Link to="/">
-              <span
-                className="oi oi-home"
-                title="home"
-                aria-hidden="true"
-              ></span>
-              Home
-            </Link>
-          </li>
-          <li className="breadcrumb-item active">{deck.name}</li>
-        </ol>
-      </nav>
-
+      <NavBar deck={deck} />
       {/* List Deck */}
       <div className="container-deck">
         <h2>{deck.name}</h2>

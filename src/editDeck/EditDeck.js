@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { readDeck, updateDeck } from "../utils/api"; // Import your API functions
+import NavBar from "../Layout/NavBar";
 
 const EditDeck = () => {
   const history = useHistory();
@@ -50,17 +51,8 @@ const EditDeck = () => {
 
   return (
     <div>
-      <nav>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="breadcrumb-item">
-            <Link to={`/decks/${deckId}`}>{formData.name}</Link>
-          </li>
-          <li className="breadcrumb-item active">Edit Deck</li>
-        </ol>
-      </nav>
+
+      <NavBar did = {deckId} deck={formData.name} />
 
       <h2>Edit Deck</h2>
 

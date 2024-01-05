@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { listDecks, deleteDeck, readDeck } from "../utils/api/index";
 import Card from "../study/Card";
+import NavBar from "../Layout/NavBar";
 
 const Study = () => {
   const [studyDeck, setStudyDeck] = useState([]);
@@ -28,22 +29,7 @@ const Study = () => {
   return (
     <div>
       <div>
-        <nav>
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item">
-              <Link to="/">
-                <span
-                  className="oi oi-home"
-                  title="home"
-                  aria-hidden="true"
-                ></span>
-                Home
-              </Link>
-            </li>
-            <li className="breadcrumb-item active">{studyDeck.name}</li>
-            <li className="breadcrumb-item active">Study</li>
-          </ol>
-        </nav>
+      <NavBar deck={studyDeck} />
       </div>
       <div>
         <h2>{`${studyDeck.name}: Study`}</h2>

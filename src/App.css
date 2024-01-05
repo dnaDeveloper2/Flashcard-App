@@ -14,3 +14,12 @@ margin: 5px;
     padding: 10px; /* Add padding to create space between the content and the border */
     margin-bottom: 20px; /* Add margin at the bottom for additional spacing */
   }
+
+.breadcrumb{
+  font-size: 18px;
+  text-indent: 10px;
+}
+
+.oi-home{
+  font-size: 21px;
+}
