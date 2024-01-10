@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { readDeck } from "../utils/api/index";
 import NavBar from "../Layout/NavBar";
+import { deleteCard } from "../utils/api/index";
 
 const Deck = () => {
   const { deckId } = useParams();
@@ -28,6 +29,21 @@ const Deck = () => {
 
     if (confirmDelete) {
       history.push("/");
+    }
+  };
+
+  const handleDeleteCard = async (cardId) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this card?");
+
+    if (confirmDelete) {
+      try {
+        await deleteCard(cardId);
+        // Assuming you want to refresh the deck after deleting a card, you may fetch the updated deck here
+        const updatedDeck = await readDeck(deckId);
+        setDeck(updatedDeck);
+      } catch (error) {
+        console.error("Error deleting card:", error);
+      }
     }
   };
 
@@ -85,7 +101,7 @@ const Deck = () => {
               Edit Card
             </Link>
             <button
-              onClick={() => handleDelete(card.id)}
+              onClick={() => handleDeleteCard(card.id)}
               className="btn btn-danger"
             >
               <span
